@@ -1,0 +1,315 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const tools = [
+  { name: 'Astro',       category: 'Framework' },
+  { name: 'TypeScript',  category: 'Language' },
+  { name: 'React',       category: 'Framework' },
+  { name: 'HTML & CSS',  category: 'Core' },
+  { name: 'JavaScript',  category: 'Language' },
+  { name: 'Node.js',     category: 'Runtime' },
+  { name: 'Git',         category: 'Tooling' },
+  { name: 'Vite',        category: 'Tooling' },
+  { name: 'Tailwind CSS',category: 'Styling' },
+  { name: 'Figma',       category: 'Design' },
+];
+---
+
+<BaseLayout
+  title="Web Development"
+  description="ThunderBandit27's web development work — building fast, accessible web experiences for games and beyond."
+>
+  <!-- ── SKILL HERO ─────────────────────────────────────── -->
+  <section class="skill-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <a href="/" class="breadcrumb">← Back to Home</a>
+      <div class="skill-badge">Web Development</div>
+      <h1 class="skill-title">Building the Web for Games</h1>
+      <p class="skill-subtitle">
+        Performant, accessible, and beautifully crafted web experiences —
+        from game landing pages and press kits to developer tools and interactive portfolios.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Astro</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">React</span>
+        <span class="tag">CSS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT THIS DISCIPLINE ─────────────────────────── -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <p class="section-label">The Craft</p>
+        <h2 class="section-title">Why Web Matters in Games</h2>
+      </div>
+      <div>
+        <p class="prose">
+          Every game ships with a web presence — a store page, a studio site, a
+          community hub, a developer blog. Done well, these experiences carry the
+          tone and energy of the game itself. Done poorly, they undermine the work
+          of every developer on the team.
+        </p>
+        <p class="prose">
+          I approach web development the same way I approach game development:
+          with attention to detail, a focus on performance, and a commitment to the
+          user experience. The stack changes; the discipline doesn't.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────── -->
+  <section class="section alt-bg">
+    <div class="container">
+      <p class="section-label">Work</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="grid-2 projects-grid">
+        <!-- Project Card 1 -->
+        <div class="card project-card">
+          <div class="project-thumb" aria-hidden="true">
+            <span>Project Preview</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">This Portfolio</h3>
+            <p class="project-desc">
+              Built with Astro for near-zero JS overhead and blazing-fast page loads.
+              Designed with a game-inspired dark aesthetic using vanilla CSS and
+              custom properties.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Astro</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/ThunderBandit27"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline btn-sm"
+              >GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder Card 2 -->
+        <div class="card project-card placeholder-card">
+          <div class="placeholder-inner">
+            <span class="placeholder-icon" aria-hidden="true">＋</span>
+            <p>More projects coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TOOLS ──────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Tools &amp; Technologies</p>
+      <h2 class="section-title">My Stack</h2>
+      <div class="tools-grid">
+        {tools.map((t) => (
+          <div class="tool-chip">
+            <span class="tool-name">{t.name}</span>
+            <span class="tool-cat">{t.category}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="section discipline-cta">
+    <div class="container">
+      <h2>Interested in working together?</h2>
+      <p>I'm open to junior roles, freelance projects, and collaborations.</p>
+      <a href="/about#contact" class="btn btn-web">Get In Touch →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── HERO ─────────────────────────────────────────────── */
+  .skill-hero {
+    position: relative;
+    padding: 5rem 0 4rem;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 20% 50%, rgba(96,165,250,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .breadcrumb {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--text-2);
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb:hover { color: #60a5fa; }
+
+  .skill-badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background: rgba(96,165,250,0.1);
+    border: 1px solid rgba(96,165,250,0.25);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #60a5fa;
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .skill-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-2);
+    max-width: 58ch;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .hero-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  /* ── TWO-COL LAYOUT ───────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .prose {
+    color: var(--text-2);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  /* ── ALT BG ───────────────────────────────────────────── */
+  .alt-bg {
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── PROJECTS ─────────────────────────────────────────── */
+  .projects-grid { margin-top: 2.5rem; }
+
+  .project-card { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .project-thumb {
+    height: 180px;
+    background: var(--bg-3);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--text-3);
+    border: 1px dashed var(--border);
+  }
+
+  .project-info { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .project-title {
+    font-size: 1.2rem;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .project-desc { color: var(--text-2); font-size: 0.95rem; line-height: 1.65; }
+
+  .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  .project-links { margin-top: 0.25rem; }
+
+  .btn-sm { padding: 0.45rem 1rem; font-size: 0.82rem; }
+
+  /* ── PLACEHOLDER ──────────────────────────────────────── */
+  .placeholder-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    border-style: dashed;
+  }
+
+  .placeholder-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-3);
+    font-size: 0.9rem;
+  }
+
+  .placeholder-icon { font-size: 2rem; opacity: 0.5; }
+
+  /* ── TOOLS GRID ───────────────────────────────────────── */
+  .tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .tool-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 1.1rem;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+
+  .tool-chip:hover { border-color: rgba(96,165,250,0.35); }
+
+  .tool-name { font-weight: 600; font-size: 0.9rem; }
+  .tool-cat  { font-size: 0.75rem; color: var(--text-3); }
+
+  /* ── DISCIPLINE CTA ───────────────────────────────────── */
+  .discipline-cta {
+    text-align: center;
+  }
+
+  .discipline-cta h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+  .discipline-cta p  { color: var(--text-2); margin-bottom: 1.75rem; }
+
+  .btn-web {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #3b82f6;
+    color: #fff;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-web:hover { background: #60a5fa; transform: translateY(-1px); }
+
+  @media (max-width: 760px) {
+    .two-col { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>

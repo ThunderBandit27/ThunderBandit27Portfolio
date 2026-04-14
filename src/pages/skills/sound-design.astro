@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const tools = [
+  { name: 'FMOD Studio',  category: 'Middleware' },
+  { name: 'Wwise',        category: 'Middleware' },
+  { name: 'Reaper',       category: 'DAW' },
+  { name: 'Ableton Live', category: 'DAW' },
+  { name: 'FL Studio',    category: 'DAW' },
+  { name: 'iZotope RX',  category: 'Processing' },
+  { name: 'Vital',        category: 'Synth' },
+  { name: 'Serum',        category: 'Synth' },
+  { name: 'Unity Audio',  category: 'Integration' },
+  { name: 'Field Recording', category: 'Technique' },
+];
+
+const techniques = [
+  'Layered SFX design for impactful hits',
+  'Adaptive music systems with stems',
+  'Parameter-driven mixing in FMOD',
+  'Ambience beds and atmospheric design',
+  'Procedural audio concepts',
+  'Foley and movement sounds',
+  'UI & feedback sound design',
+  'Spatial / 3D audio positioning',
+  'Audio compression & mastering basics',
+  'Communicating audio intent to teams',
+];
+---
+
+<BaseLayout
+  title="Sound Design"
+  description="ThunderBandit27's sound design work — crafting audio that pulls players deeper into the world."
+>
+  <!-- ── SKILL HERO ─────────────────────────────────────── -->
+  <section class="skill-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <a href="/" class="breadcrumb">← Back to Home</a>
+      <div class="skill-badge">Sound Design</div>
+      <h1 class="skill-title">Audio That Builds Worlds</h1>
+      <p class="skill-subtitle">
+        Sound is 50% of the experience. SFX, music, ambience, and adaptive audio
+        implemented directly into the game engine — making every moment land harder.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">FMOD</span>
+        <span class="tag">Wwise</span>
+        <span class="tag">Reaper</span>
+        <span class="tag">Ableton</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT THIS DISCIPLINE ─────────────────────────── -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <p class="section-label">The Craft</p>
+        <h2 class="section-title">Sound as a Game System</h2>
+      </div>
+      <div>
+        <p class="prose">
+          The best game audio isn't just heard — it's felt. A footstep on gravel
+          that confirms your position. An ambient drone that tells you the area is
+          dangerous before you see anything. A music cue that swells right as your
+          combo hits its peak.
+        </p>
+        <p class="prose">
+          What separates game audio from everything else is reactivity. The sound
+          system needs to respond to the player, the environment, and the game
+          state — often all at once. That's what middleware like FMOD and Wwise
+          are built for, and where my technical background as a programmer helps.
+        </p>
+        <p class="prose">
+          I handle the full pipeline: recording and editing source material,
+          designing SFX and music beds, and integrating them into Unity using
+          FMOD or native Audio components.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WORK / AUDIO SAMPLES ──────────────────────────── -->
+  <section class="section alt-bg">
+    <div class="container">
+      <p class="section-label">Work</p>
+      <h2 class="section-title">Audio Samples</h2>
+      <p class="section-body" style="margin-bottom: 2.5rem;">
+        Audio work from game jams, personal projects, and experimental sound design.
+      </p>
+
+      <div class="audio-grid">
+        <!-- Sample 1 Placeholder -->
+        <div class="card audio-card">
+          <div class="audio-waveform" aria-hidden="true">
+            <div class="wave-bars">
+              {Array.from({ length: 32 }).map((_, i) => (
+                <div class="wave-bar" style={`height: ${20 + Math.abs(Math.sin(i * 0.8)) * 60}%`} />
+              ))}
+            </div>
+          </div>
+          <div class="audio-meta">
+            <h3 class="audio-title">Project SFX Pack</h3>
+            <p class="audio-desc">Sound effects designed for a [genre] game — UI clicks, impacts, footsteps, and environmental ambience.</p>
+            <div class="audio-tags">
+              <span class="tag">SFX</span>
+              <span class="tag">Reaper</span>
+              <span class="tag">FMOD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 2 Placeholder -->
+        <div class="card audio-card placeholder-card">
+          <div class="placeholder-inner">
+            <span class="placeholder-icon" aria-hidden="true">🔊</span>
+            <p>Audio samples coming soon</p>
+            <span class="placeholder-hint">Add SoundCloud embeds, audio files, or project links here</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TECHNIQUES ─────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Approach</p>
+      <h2 class="section-title">Techniques &amp; Specialisms</h2>
+      <p class="section-body" style="margin-bottom: 2.5rem;">
+        The skills and methodologies I bring to game audio work.
+      </p>
+      <ul class="techniques-list">
+        {techniques.map((t) => (
+          <li class="technique-item">
+            <span class="technique-bullet" aria-hidden="true">▸</span>
+            {t}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── TOOLS ──────────────────────────────────────────── -->
+  <section class="section alt-bg">
+    <div class="container">
+      <p class="section-label">Tools &amp; Technologies</p>
+      <h2 class="section-title">My Stack</h2>
+      <div class="tools-grid">
+        {tools.map((t) => (
+          <div class="tool-chip">
+            <span class="tool-name">{t.name}</span>
+            <span class="tool-cat">{t.category}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="section discipline-cta">
+    <div class="container">
+      <h2>Need a sound designer for your game?</h2>
+      <p>I'm available for project-based audio work and full-time roles.</p>
+      <a href="/about#contact" class="btn btn-sound">Get In Touch →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── HERO ─────────────────────────────────────────────── */
+  .skill-hero {
+    position: relative;
+    padding: 5rem 0 4rem;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 20% 50%, rgba(16,185,129,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .breadcrumb {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--text-2);
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb:hover { color: #34d399; }
+
+  .skill-badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.25);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #34d399;
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .skill-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-2);
+    max-width: 58ch;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .hero-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  /* ── TWO-COL ──────────────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .prose { color: var(--text-2); font-size: 1rem; line-height: 1.75; margin-bottom: 1rem; }
+
+  /* ── ALT BG ───────────────────────────────────────────── */
+  .alt-bg {
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── AUDIO SAMPLES ────────────────────────────────────── */
+  .audio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .audio-card { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .audio-waveform {
+    height: 80px;
+    background: var(--bg-3);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    overflow: hidden;
+  }
+
+  .wave-bars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wave-bar {
+    flex: 1;
+    background: rgba(52,211,153,0.4);
+    border-radius: 2px;
+    min-height: 4px;
+  }
+
+  .audio-meta { display: flex; flex-direction: column; gap: 0.6rem; }
+
+  .audio-title { font-size: 1.15rem; font-family: 'Rajdhani', sans-serif; }
+  .audio-desc  { color: var(--text-2); font-size: 0.92rem; line-height: 1.6; }
+  .audio-tags  { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  .placeholder-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    border-style: dashed;
+  }
+
+  .placeholder-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-3);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .placeholder-icon  { font-size: 2rem; opacity: 0.5; }
+  .placeholder-hint  { font-size: 0.78rem; max-width: 24ch; }
+
+  /* ── TECHNIQUES ───────────────────────────────────────── */
+  .techniques-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 2rem;
+  }
+
+  .technique-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--text-2);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .technique-bullet { color: #34d399; font-size: 0.8rem; flex-shrink: 0; }
+
+  /* ── TOOLS ────────────────────────────────────────────── */
+  .tools-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.5rem; }
+
+  .tool-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 1.1rem;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+
+  .tool-chip:hover { border-color: rgba(52,211,153,0.35); }
+
+  .tool-name { font-weight: 600; font-size: 0.9rem; }
+  .tool-cat  { font-size: 0.75rem; color: var(--text-3); }
+
+  /* ── CTA ──────────────────────────────────────────────── */
+  .discipline-cta { text-align: center; }
+  .discipline-cta h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+  .discipline-cta p  { color: var(--text-2); margin-bottom: 1.75rem; }
+
+  .btn-sound {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #059669;
+    color: #fff;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-sound:hover { background: #34d399; color: #000; transform: translateY(-1px); }
+
+  @media (max-width: 760px) {
+    .two-col { grid-template-columns: 1fr; gap: 2rem; }
+    .techniques-list { grid-template-columns: 1fr; }
+    .audio-grid { grid-template-columns: 1fr; }
+  }
+</style>

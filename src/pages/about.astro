@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="About ThunderBandit27 — game developer, web developer, and sound designer breaking into the games industry."
+>
+  <!-- ── PAGE HERO ──────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">About Me</p>
+      <h1 class="page-title">The Person Behind the Code</h1>
+      <p class="page-subtitle">
+        Aspiring game developer with a passion for building and a love for all
+        things interactive.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── BIO ───────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container bio-grid">
+      <div class="bio-avatar" aria-label="Profile photo placeholder">
+        <span>TB27</span>
+      </div>
+      <div class="bio-content">
+        <p class="section-label">Background</p>
+        <h2 class="section-title">Hi, I'm ThunderBandit27</h2>
+        <p class="bio-text">
+          I'm a multi-disciplinary developer with a focus on the games industry.
+          My toolkit spans gameplay programming, interactive web development, and
+          sound design — three crafts that I believe are deeply interconnected when
+          building immersive experiences.
+        </p>
+        <p class="bio-text">
+          Games have shaped how I think about problem-solving, systems design, and
+          user experience. Every mechanic is a promise to the player. Every sound
+          reinforces a feeling. Every line of code either earns trust or breaks it.
+          I take that seriously.
+        </p>
+        <p class="bio-text">
+          I'm actively seeking my first professional role in the games industry —
+          whether that's as a gameplay programmer, a technical designer, or
+          somewhere in between. I bring energy, curiosity, and a genuine love for
+          the craft.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GOALS ─────────────────────────────────────────── -->
+  <section class="section alt-section">
+    <div class="container">
+      <p class="section-label">Goals</p>
+      <h2 class="section-title">What I'm Working Toward</h2>
+      <div class="grid-3 goals-grid">
+        <div class="card goal-card">
+          <div class="goal-icon" aria-hidden="true">🎮</div>
+          <h3>Ship a Published Game</h3>
+          <p>
+            Get a commercially released title to market — whether as part of a
+            studio team or as an independent project.
+          </p>
+        </div>
+        <div class="card goal-card">
+          <div class="goal-icon" aria-hidden="true">⚙️</div>
+          <h3>Grow as a Gameplay Programmer</h3>
+          <p>
+            Deepen expertise in game systems — AI, physics, tooling, and the
+            low-level craft of making mechanics feel exceptional.
+          </p>
+        </div>
+        <div class="card goal-card">
+          <div class="goal-icon" aria-hidden="true">🔊</div>
+          <h3>Master Interactive Audio</h3>
+          <p>
+            Push my sound design further into adaptive and procedural audio,
+            building on FMOD and Wwise to create reactive soundscapes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DISCIPLINES OVERVIEW ───────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Skills at a Glance</p>
+      <h2 class="section-title">My Disciplines</h2>
+      <div class="skills-list">
+        <a href="/skills/web-development" class="skill-row web">
+          <div class="skill-meta">
+            <span class="skill-name">Web Development</span>
+            <span class="skill-tags">
+              <span class="tag">Astro</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">React</span>
+            </span>
+          </div>
+          <span class="skill-arrow">→</span>
+        </a>
+        <a href="/skills/game-programming" class="skill-row game">
+          <div class="skill-meta">
+            <span class="skill-name">Game Programming</span>
+            <span class="skill-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Unreal</span>
+              <span class="tag">Godot</span>
+            </span>
+          </div>
+          <span class="skill-arrow">→</span>
+        </a>
+        <a href="/skills/sound-design" class="skill-row sound">
+          <div class="skill-meta">
+            <span class="skill-name">Sound Design</span>
+            <span class="skill-tags">
+              <span class="tag">FMOD</span>
+              <span class="tag">Wwise</span>
+              <span class="tag">Reaper</span>
+              <span class="tag">Ableton</span>
+            </span>
+          </div>
+          <span class="skill-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────── -->
+  <section class="section" id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-body" style="margin-bottom: 2rem;">
+        I'm open to junior developer roles, internships, and contract work in the
+        games industry. If you're building something interesting, I'd love to hear
+        about it.
+      </p>
+      <div class="contact-links">
+        <a
+          href="https://github.com/ThunderBandit27"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >GitHub</a>
+        <a href="mailto:your@email.com" class="btn btn-primary">Send an Email →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── PAGE HERO ────────────────────────────────────────── */
+  .page-hero {
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-2);
+    max-width: 52ch;
+  }
+
+  /* ── BIO ──────────────────────────────────────────────── */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .bio-avatar {
+    aspect-ratio: 1;
+    border-radius: var(--radius-lg);
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .bio-text {
+    color: var(--text-2);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  /* ── GOALS ────────────────────────────────────────────── */
+  .alt-section {
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .goals-grid { margin-top: 2.5rem; }
+
+  .goal-card { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .goal-icon { font-size: 1.75rem; }
+
+  .goal-card h3 {
+    font-size: 1.15rem;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .goal-card p { color: var(--text-2); font-size: 0.95rem; line-height: 1.65; }
+
+  /* ── SKILLS LIST ──────────────────────────────────────── */
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: border-color 0.2s, transform 0.2s;
+    gap: 1rem;
+  }
+
+  .web:hover   { border-color: rgba(96,165,250,0.4); transform: translateX(4px); }
+  .game:hover  { border-color: rgba(167,139,250,0.4); transform: translateX(4px); }
+  .sound:hover { border-color: rgba(52,211,153,0.35); transform: translateX(4px); }
+
+  .skill-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .skill-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .skill-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  .skill-arrow {
+    color: var(--text-3);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .web:hover .skill-arrow   { color: #60a5fa; }
+  .game:hover .skill-arrow  { color: #a78bfa; }
+  .sound:hover .skill-arrow { color: #34d399; }
+
+  /* ── CONTACT ──────────────────────────────────────────── */
+  .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  @media (max-width: 720px) {
+    .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .bio-avatar { max-width: 140px; }
+  }
+</style>

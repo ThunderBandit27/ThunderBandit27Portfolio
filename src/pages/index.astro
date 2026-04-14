@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" description="ThunderBandit27 — Game developer, web developer & sound designer breaking into the games industry.">
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="eyebrow">Available for work · Games Industry</p>
+      <h1 class="hero-title">
+        Thunder<span>Bandit</span><em>27</em>
+      </h1>
+      <p class="hero-sub">
+        Game Developer &amp; Creative Technologist
+      </p>
+      <p class="hero-body">
+        I craft immersive experiences through gameplay programming,
+        interactive web development, and spatial sound design.
+        Passionate about building worlds players don't want to leave.
+      </p>
+      <div class="hero-cta">
+        <a href="#disciplines" class="btn btn-primary">Explore My Work ↓</a>
+        <a href="/about" class="btn btn-outline">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DISCIPLINES ───────────────────────────────────── -->
+  <section class="section" id="disciplines">
+    <div class="container">
+      <p class="section-label">Disciplines</p>
+      <h2 class="section-title">What I Do</h2>
+      <p class="section-body">
+        Three interconnected skill sets, all aimed at one goal — building great games.
+      </p>
+
+      <div class="grid-3 disciplines-grid">
+        <!-- Web Development -->
+        <a href="/skills/web-development" class="card discipline-card web">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Web Development</h3>
+          <p class="card-body">
+            Building performant, accessible web experiences — from game landing pages
+            to developer tools and portfolio sites.
+          </p>
+          <span class="card-link">View Discipline →</span>
+        </a>
+
+        <!-- Game Programming -->
+        <a href="/skills/game-programming" class="card discipline-card game">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="2"/>
+              <path d="M12 12h.01M7 12h.01"/><line x1="17" y1="10" x2="17" y2="14"/><line x1="15" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Game Programming</h3>
+          <p class="card-body">
+            Writing systems that power gameplay — from physics and AI to tools,
+            engines, and the code that makes mechanics feel just right.
+          </p>
+          <span class="card-link">View Discipline →</span>
+        </a>
+
+        <!-- Sound Design -->
+        <a href="/skills/sound-design" class="card discipline-card sound">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Sound Design</h3>
+          <p class="card-body">
+            Crafting audio that pulls players deeper into the world — SFX, music,
+            ambience, and interactive audio implemented with FMOD and Wwise.
+          </p>
+          <span class="card-link">View Discipline →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA STRIP ─────────────────────────────────────── -->
+  <section class="cta-strip">
+    <div class="container cta-inner">
+      <div>
+        <h2 class="cta-title">Ready to build something great?</h2>
+        <p class="cta-body">I'm looking for my first role in the games industry. Let's talk.</p>
+      </div>
+      <a href="/about#contact" class="btn btn-primary">Get In Touch →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── HERO ─────────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    padding: 7rem 0 6rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(129,140,248,0.12) 0%, transparent 70%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 39px,
+        rgba(255,255,255,0.025) 40px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 39px,
+        rgba(255,255,255,0.025) 40px
+      );
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    max-width: 780px;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 6px #4ade80;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 9vw, 6rem);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-title span { color: var(--accent); }
+  .hero-title em { font-style: normal; color: var(--text-2); }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--text-2);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-body {
+    font-size: 1.05rem;
+    color: var(--text-2);
+    max-width: 52ch;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ── DISCIPLINE CARDS ─────────────────────────────────── */
+  .disciplines-grid {
+    margin-top: 3rem;
+  }
+
+  .discipline-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  .card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .web .card-icon   { background: rgba(96,165,250,0.12); color: #60a5fa; }
+  .game .card-icon  { background: rgba(167,139,250,0.12); color: #a78bfa; }
+  .sound .card-icon { background: rgba(52,211,153,0.1);  color: #34d399; }
+
+  .web:hover   { border-color: rgba(96,165,250,0.35); }
+  .game:hover  { border-color: rgba(167,139,250,0.35); }
+  .sound:hover { border-color: rgba(52,211,153,0.3); }
+
+  .card-title {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .card-body {
+    color: var(--text-2);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .card-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-3);
+    transition: color 0.2s;
+  }
+
+  .web:hover .card-link   { color: #60a5fa; }
+  .game:hover .card-link  { color: #a78bfa; }
+  .sound:hover .card-link { color: #34d399; }
+
+  /* ── CTA STRIP ────────────────────────────────────────── */
+  .cta-strip {
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 3.5rem 0;
+    margin-top: var(--section-gap);
+  }
+
+  .cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin-bottom: 0.4rem;
+  }
+
+  .cta-body {
+    color: var(--text-2);
+    font-size: 0.95rem;
+  }
+</style>

@@ -1,0 +1,316 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const tools = [
+  { name: 'Unity',        category: 'Engine' },
+  { name: 'C#',           category: 'Language' },
+  { name: 'Unreal Engine',category: 'Engine' },
+  { name: 'C++',          category: 'Language' },
+  { name: 'Godot',        category: 'Engine' },
+  { name: 'GDScript',     category: 'Language' },
+  { name: 'Git / GitHub', category: 'Tooling' },
+  { name: 'Rider / VS',   category: 'IDE' },
+  { name: 'Blender',      category: '3D' },
+  { name: 'ScriptableObjects', category: 'Pattern' },
+];
+
+const concepts = [
+  'Game loops & delta time',
+  'State machines & AI behaviour trees',
+  'Physics & collision systems',
+  'Event-driven architecture',
+  'Object pooling & memory optimisation',
+  'Procedural generation',
+  'Save / load systems',
+  'Custom editor tooling',
+  'Shader basics (HLSL / ShaderGraph)',
+  'Camera systems & cinemachine',
+];
+---
+
+<BaseLayout
+  title="Game Programming"
+  description="ThunderBandit27's game programming work — gameplay systems, engines, and the code that makes mechanics feel right."
+>
+  <!-- ── SKILL HERO ─────────────────────────────────────── -->
+  <section class="skill-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <a href="/" class="breadcrumb">← Back to Home</a>
+      <div class="skill-badge">Game Programming</div>
+      <h1 class="skill-title">Systems That Power Play</h1>
+      <p class="skill-subtitle">
+        Writing the code behind the curtain — from physics and AI to game loops
+        and editor tooling. Making mechanics feel good is a science and an art.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Unity</span>
+        <span class="tag">C#</span>
+        <span class="tag">Unreal</span>
+        <span class="tag">Godot</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT THIS DISCIPLINE ─────────────────────────── -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <p class="section-label">The Craft</p>
+        <h2 class="section-title">What Game Programming Means to Me</h2>
+      </div>
+      <div>
+        <p class="prose">
+          A game mechanic lives or dies on its implementation. You can prototype
+          something in hours and spend months making it actually feel fun.
+          That gap — between "it works" and "it's great" — is where game
+          programming gets interesting.
+        </p>
+        <p class="prose">
+          My focus is on writing clean, maintainable systems that serve designers
+          and players alike. That means clear interfaces, predictable behaviour,
+          and the kind of code that's easy to build on when a design changes at
+          the last minute.
+        </p>
+        <p class="prose">
+          I work primarily in Unity and C#, with experience in Unreal Engine and
+          Godot. I'm comfortable implementing gameplay systems from scratch and
+          collaborating within existing codebases.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────── -->
+  <section class="section alt-bg">
+    <div class="container">
+      <p class="section-label">Work</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="grid-2 projects-grid">
+        <!-- Placeholder Card 1 -->
+        <div class="card project-card placeholder-card">
+          <div class="placeholder-inner">
+            <span class="placeholder-icon" aria-hidden="true">🎮</span>
+            <p>Game project coming soon</p>
+            <span class="placeholder-hint">Add your game projects here</span>
+          </div>
+        </div>
+
+        <!-- Placeholder Card 2 -->
+        <div class="card project-card placeholder-card">
+          <div class="placeholder-inner">
+            <span class="placeholder-icon" aria-hidden="true">＋</span>
+            <p>More projects coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONCEPTS ───────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Knowledge</p>
+      <h2 class="section-title">Concepts &amp; Systems</h2>
+      <p class="section-body" style="margin-bottom: 2.5rem;">
+        A non-exhaustive list of the gameplay programming concepts I work with.
+      </p>
+      <ul class="concepts-list">
+        {concepts.map((c) => (
+          <li class="concept-item">
+            <span class="concept-bullet" aria-hidden="true">▸</span>
+            {c}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── TOOLS ──────────────────────────────────────────── -->
+  <section class="section alt-bg">
+    <div class="container">
+      <p class="section-label">Tools &amp; Technologies</p>
+      <h2 class="section-title">My Stack</h2>
+      <div class="tools-grid">
+        {tools.map((t) => (
+          <div class="tool-chip">
+            <span class="tool-name">{t.name}</span>
+            <span class="tool-cat">{t.category}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="section discipline-cta">
+    <div class="container">
+      <h2>Looking for a gameplay programmer?</h2>
+      <p>I'm actively seeking my first studio role or contract engagement.</p>
+      <a href="/about#contact" class="btn btn-game">Get In Touch →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── HERO ─────────────────────────────────────────────── */
+  .skill-hero {
+    position: relative;
+    padding: 5rem 0 4rem;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 20% 50%, rgba(124,58,237,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .breadcrumb {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--text-2);
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb:hover { color: #a78bfa; }
+
+  .skill-badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background: rgba(124,58,237,0.12);
+    border: 1px solid rgba(124,58,237,0.3);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a78bfa;
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .skill-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-2);
+    max-width: 58ch;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .hero-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  /* ── TWO-COL ──────────────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .prose { color: var(--text-2); font-size: 1rem; line-height: 1.75; margin-bottom: 1rem; }
+
+  /* ── ALT BG ───────────────────────────────────────────── */
+  .alt-bg {
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── PROJECTS ─────────────────────────────────────────── */
+  .projects-grid { margin-top: 2.5rem; }
+
+  .project-card { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .placeholder-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    border-style: dashed;
+  }
+
+  .placeholder-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-3);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .placeholder-icon { font-size: 2rem; opacity: 0.5; }
+  .placeholder-hint { font-size: 0.78rem; }
+
+  /* ── CONCEPTS ─────────────────────────────────────────── */
+  .concepts-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 2rem;
+  }
+
+  .concept-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--text-2);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .concept-bullet { color: #a78bfa; font-size: 0.8rem; flex-shrink: 0; }
+
+  /* ── TOOLS GRID ───────────────────────────────────────── */
+  .tools-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.5rem; }
+
+  .tool-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 1.1rem;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+
+  .tool-chip:hover { border-color: rgba(167,139,250,0.4); }
+
+  .tool-name { font-weight: 600; font-size: 0.9rem; }
+  .tool-cat  { font-size: 0.75rem; color: var(--text-3); }
+
+  /* ── CTA ──────────────────────────────────────────────── */
+  .discipline-cta { text-align: center; }
+  .discipline-cta h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+  .discipline-cta p  { color: var(--text-2); margin-bottom: 1.75rem; }
+
+  .btn-game {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #7c3aed;
+    color: #fff;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-game:hover { background: #a78bfa; transform: translateY(-1px); }
+
+  @media (max-width: 760px) {
+    .two-col { grid-template-columns: 1fr; gap: 2rem; }
+    .concepts-list { grid-template-columns: 1fr; }
+  }
+</style>
