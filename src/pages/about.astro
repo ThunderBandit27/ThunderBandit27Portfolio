@@ -21,29 +21,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- ── BIO ───────────────────────────────────────────── -->
   <section class="section">
     <div class="container bio-grid">
-      <div class="bio-avatar" aria-label="Profile photo placeholder">
-        <span>TB27</span>
-      </div>
+      <img class="bio-avatar" src="/headshot.png" alt="ThunderBandit27 profile photo" />
       <div class="bio-content">
         <p class="section-label">Background</p>
-        <h2 class="section-title">Hi, I'm ThunderBandit27</h2>
+        <h2 class="section-title">Hi, I'm Ezekiel Mueller</h2>
         <p class="bio-text">
-          I'm a multi-disciplinary developer with a focus on the games industry.
-          My toolkit spans gameplay programming, interactive web development, and
-          sound design — three crafts that I believe are deeply interconnected when
-          building immersive experiences.
+
         </p>
         <p class="bio-text">
-          Games have shaped how I think about problem-solving, systems design, and
-          user experience. Every mechanic is a promise to the player. Every sound
-          reinforces a feeling. Every line of code either earns trust or breaks it.
-          I take that seriously.
+
         </p>
         <p class="bio-text">
-          I'm actively seeking my first professional role in the games industry —
-          whether that's as a gameplay programmer, a technical designer, or
-          somewhere in between. I bring energy, curiosity, and a genuine love for
-          the craft.
+
         </p>
       </div>
     </div>
@@ -59,24 +48,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="goal-icon" aria-hidden="true">🎮</div>
           <h3>Ship a Published Game</h3>
           <p>
-            Get a commercially released title to market — whether as part of a
-            studio team or as an independent project.
+
           </p>
         </div>
         <div class="card goal-card">
           <div class="goal-icon" aria-hidden="true">⚙️</div>
           <h3>Grow as a Gameplay Programmer</h3>
           <p>
-            Deepen expertise in game systems — AI, physics, tooling, and the
-            low-level craft of making mechanics feel exceptional.
+
           </p>
         </div>
         <div class="card goal-card">
           <div class="goal-icon" aria-hidden="true">🔊</div>
           <h3>Master Interactive Audio</h3>
           <p>
-            Push my sound design further into adaptive and procedural audio,
-            building on FMOD and Wwise to create reactive soundscapes.
+
           </p>
         </div>
       </div>
@@ -108,7 +94,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <span class="tag">Unity</span>
               <span class="tag">C#</span>
               <span class="tag">Unreal</span>
-              <span class="tag">Godot</span>
             </span>
           </div>
           <span class="skill-arrow">→</span>
@@ -118,8 +103,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="skill-name">Sound Design</span>
             <span class="skill-tags">
               <span class="tag">FMOD</span>
-              <span class="tag">Wwise</span>
-              <span class="tag">Reaper</span>
               <span class="tag">Ableton</span>
             </span>
           </div>
@@ -135,9 +118,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="section-label">Contact</p>
       <h2 class="section-title">Let's Connect</h2>
       <p class="section-body" style="margin-bottom: 2rem;">
-        I'm open to junior developer roles, internships, and contract work in the
-        games industry. If you're building something interesting, I'd love to hear
-        about it.
+        Feel free to reach out if you'd like to collaborate, have questions about my work, or just want to chat about games and development.
       </p>
       <div class="contact-links">
         <a
@@ -146,7 +127,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           rel="noopener noreferrer"
           class="btn btn-outline"
         >GitHub</a>
-        <a href="mailto:your@email.com" class="btn btn-primary">Send an Email →</a>
+        <a href="mailto:contact@thunderbandit27.com" class="btn btn-primary">Send an Email →</a>
       </div>
     </div>
   </section>
@@ -179,18 +160,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .bio-avatar {
+    width: 100%;
     aspect-ratio: 1;
     border-radius: var(--radius-lg);
-    background: var(--bg-3);
     border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.05em;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
   }
 
   .bio-text {
