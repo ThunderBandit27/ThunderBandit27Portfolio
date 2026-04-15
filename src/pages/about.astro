@@ -127,6 +127,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           rel="noopener noreferrer"
           class="btn btn-outline"
         >GitHub</a>
+        <a
+          href="https://www.linkedin.com/in/thunderbandit27/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-linkedin"
+        >LinkedIn</a>
         <a href="mailto:contact@thunderbandit27.com" class="btn btn-primary">Send an Email →</a>
       </div>
     </div>
@@ -249,6 +255,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   /* ── CONTACT ──────────────────────────────────────────── */
   .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #0a66c2;
+    color: #fff;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-linkedin:hover { background: #0077b5; transform: translateY(-1px); }
 
   @media (max-width: 720px) {
     .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
