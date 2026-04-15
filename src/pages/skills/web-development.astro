@@ -70,7 +70,7 @@ const tools = [
           <div class="project-info">
             <h3 class="project-title">This Portfolio</h3>
             <p class="project-desc">
-
+              A personal portfolio website built to showcase my work, skills, and projects as a web developer, game programmer, and sound designer.
             </p>
             <div class="project-tags">
               <span class="tag">Astro</span>
@@ -87,8 +87,30 @@ const tools = [
             </div>
           </div>
         </div>
-
-        <!-- Placeholder Card 2 -->
+        <!-- Project Card 2 -->
+        <div class="card project-card">
+          <img class="project-thumb" src="/webproj2.png" alt="Elite Dental Prosthetics website screenshot" />
+          <div class="project-info">
+            <h3 class="project-title">Elite Dental Prosthetics</h3>
+            <p class="project-desc">
+              A modern, responsive website built for Elite Dental Prosthetics to showcase their services and provide an accessible online presence for their clients.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Astro</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://elitedentalinc.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline btn-sm"
+              >Website →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Placeholder Card 3 -->
         <div class="card project-card placeholder-card">
           <div class="placeholder-inner">
             <span class="placeholder-icon" aria-hidden="true">＋</span>
@@ -209,6 +231,7 @@ const tools = [
 
   .project-thumb {
     height: 180px;
+    width: 100%;
     background: var(--bg-3);
     border-radius: var(--radius);
     display: flex;
@@ -216,7 +239,9 @@ const tools = [
     justify-content: center;
     font-size: 0.85rem;
     color: var(--text-3);
-    border: 1px dashed var(--border);
+    border: 1px solid var(--border);
+    object-fit: cover;
+    object-position: top;
   }
 
   .project-info { display: flex; flex-direction: column; gap: 0.75rem; }
